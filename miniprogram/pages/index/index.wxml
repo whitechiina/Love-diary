@@ -1,0 +1,10 @@
+<button class="cu-btn bg-red margin-tb-sm lg" bindtap="dataList">数据列表</button>
+
+<view wx:for="{{list}}" wx:key="item">
+  <view bindtap="detail" data-id="{{item._id}}">
+    <view>{{item.title}}</view>
+    <view>{{item.tags}}</view>
+    <view>{{item.view}}</view>
+    <button bindtap="delect" data-id="{{item._id}}">删除</button>
+  </view>
+</view>

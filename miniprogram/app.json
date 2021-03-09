@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/time/time",
+    "pages/notes/notes",
+    "pages/index/index",
+    "pages/messagee/messagee",
+    "pages/love/love",
+    
+    "pages/add/add",
+    "pages/complex/complex",
+
+    "pages/component/add/add"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#0081ff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/time/time",
+        "selectedIconPath": "images/时间.png",
+        "iconPath": "images/时间.png",
+        "text": "云计时"
+      },
+      {
+        "pagePath": "pages/notes/notes",
+        "selectedIconPath": "images/记录.png",
+        "iconPath": "images/记录.png",
+        "text": "云查询"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "selectedIconPath": "images/对话.png",
+        "iconPath": "images/对话.png",
+        "text": "云新增"
+      },
+      {
+        "pagePath": "pages/notes/notes",
+        "selectedIconPath": "images/爱情.png",
+        "iconPath": "images/爱情.png",
+        "text": "云"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

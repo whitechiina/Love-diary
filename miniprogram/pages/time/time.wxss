@@ -1,0 +1,12 @@
+/* pages/home/home.wxss */
+
+.middle {
+  text-align: center;
+}
+
+.bg {
+  width: 400rpx;
+  height: 400rpx;
+  font-size: 2.5em;
+  border: 10rpx solid #fff;
+}

@@ -1,0 +1,85 @@
+<view class="cu-timeline main">
+  <view class="cu-item text-red" wx:for="{{list}}" wx:key="index">
+    <view class="bg-gradual-orange content shadow">
+      <view class="text-df padding-bottom-xs">{{item.title}}</view>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">{{item.index}}</view>
+        <view class="cu-tag line-white">{{item.data}} {{item.time}}</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        {{item.text}}
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 新增跳转 -->
+  <view class="add">
+    <add></add>
+  </view>
+
+  <!-- <view class="cu-item text-red">
+    <view class="bg-gradual-red content shadow">
+      <view class="text-df padding-bottom-xs">Who</view>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">记事</view>
+        <view class="cu-tag line-white">当前时间</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view class="text-justify">基多多少少于Html5，css3及JS等前端技术的Web开发；</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item text-red">
+    <view class="bg-gradual-green content shadow">
+      <view class="text-df padding-bottom-xs">Who</view>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">记事</view>
+        <view class="cu-tag line-white">当前时间</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view class="text-justify">基多多少少于Html5，css3及JS等前端技术的Web开发；</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item text-red">
+    <view class="bg-gradual-blue content shadow">
+      <view class="text-df padding-bottom-xs">Who</view>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">记事</view>
+        <view class="cu-tag line-white">当前时间</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view class="text-justify">基多多少少于Html5，css3及JS等前端技术的Web开发；</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item text-red">
+    <view class="bg-gradual-purple content shadow">
+      <view class="text-df padding-bottom-xs">Who</view>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">记事</view>
+        <view class="cu-tag line-white">当前时间</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view class="text-justify">基多多少少于Html5，css3及JS等前端技术的Web开发；</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item text-red">
+    <view class="bg-gradual-pink content shadow">
+      <view class="text-df padding-bottom-xs">Who</view>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">记事</view>
+        <view class="cu-tag line-white">当前时间</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view class="text-justify">基多多少少于Html5，css3及JS等前端技术的Web开发；</view>
+      </view>
+    </view>
+  </view> -->
+</view>

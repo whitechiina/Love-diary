@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "add": "/pages/component/add/add"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100
+}

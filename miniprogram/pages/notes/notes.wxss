@@ -1,0 +1,14 @@
+.add {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.cu-timeline>.cu-item>.content {
+  border: 8rpx solid #fff;
+}
+
