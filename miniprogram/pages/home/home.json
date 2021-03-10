@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "time": "/pages/time/time",
-    "notes": "/pages/notes/notes",
-    "messagee": "/pages/messagee/messagee",
-    "love": "/pages/love/love"
-  }
-}

@@ -11,4 +11,3 @@
 .cu-timeline>.cu-item>.content {
   border: 8rpx solid #fff;
 }
-

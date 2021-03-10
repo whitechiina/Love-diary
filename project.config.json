@@ -24,7 +24,7 @@
 		"bundle": false
 	},
 	"appid": "wx117c2461eeab6d08",
-	"projectname": "%E6%81%8B%E7%88%B1%E6%97%A5%E8%AE%B0",
+	"projectname": "%E4%BA%91%E5%BC%80%E5%8F%91",
 	"libVersion": "2.14.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -56,12 +56,7 @@
 					"id": -1,
 					"name": "pages/notes/notes",
 					"pathName": "pages/notes/notes",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/add/add",
-					"pathName": "pages/add/add",
+					"query": "",
 					"scene": null
 				}
 			]

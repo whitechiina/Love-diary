@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "add": "/pages/component/add/add"
+    "shade": "/pages/shade/shade"
   },
   "enablePullDownRefresh": true,
   "onReachBottomDistance": 100

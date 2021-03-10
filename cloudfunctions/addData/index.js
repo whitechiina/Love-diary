@@ -12,9 +12,12 @@ exports.main = async (event, context) => {
     data: {
       title: "标题",
       index: "标签",
+      ind: "颜色",
       data1: "日期",
       time: "时间",
-      text: "文本"
+      text: "文本",
+      color: "颜色",
+      view: "访问记录"
     }
   })
 }
