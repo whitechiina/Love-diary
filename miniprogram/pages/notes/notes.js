@@ -84,6 +84,7 @@ Page({
   // 下拉刷新
   onPullDownRefresh() {
     productsCollection.get().then(res => {
+      console.log(res)
       res.data.forEach(e => {
         if (e.index == 0) {
           e.index = '日常'
@@ -132,6 +133,16 @@ Page({
       })
     })
   },
+
+  //预览图片，放大预览
+  preview(event) {
+    var src = event.currentTarget.dataset.src;//获取data-src
+    //图片预览
+    wx.previewMedia({
+      current: src // 当前显示图片的http链接
+    })
+  },
+  
 
   // 触底刷新
   onReachBottom() {

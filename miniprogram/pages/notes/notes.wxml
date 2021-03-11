@@ -8,9 +8,15 @@
         <view class="cu-tag bg-white text-blue">{{item.index}}</view>
         <view class="cu-tag line-white">{{item.data}} {{item.time}}</view>
       </view>
-      <view class="margin-top-sm text-content">
+      <view class="margin-top-sm margin-bottom-sm text-content" style="padding: 30rpx 0rpx; border: 0.1rpx solid #fff; padding: 0rpx 10rpx; border-radius: 10rpx">
         {{item.text}}
       </view>
+
+      <!-- 图片展示 -->
+      <view class="flex" wx:for="{{item.img_arr}}" style="width: 30%; display:inline-block;margin-right: 10rpx">
+        <image bindtap="preview" class="flex-sub radius" src="{{item}}" style="height: 140rpx" data-src="{{item}}"></image>
+      </view>
+
       <!-- 点赞 -->
       <view style="text-align:right;" data-id="{{item._id}}" bindtap="click">
         <view class="cu-capsule round">
@@ -18,7 +24,7 @@
             <text class="cuIcon-likefill"></text>
           </view>
           <view class="cu-tag line-white">
-            <text style="color: #fff" >{{item.view}}</text>
+            <text style="color: #fff">{{item.view}}</text>
           </view>
         </view>
       </view>

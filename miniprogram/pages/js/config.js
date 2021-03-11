@@ -1,4 +1,4 @@
-const api = "http://ai.kenaisq.top/"
+const api = "https://ai.kenaisq.top/"
 
 module.exports = {
   api

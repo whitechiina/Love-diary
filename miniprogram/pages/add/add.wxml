@@ -48,17 +48,30 @@
       <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框" name="text" value="{{text}}"></textarea>
     </view>
 
+    <!-- 上传图片 -->
+    <view>
+      <view class="padding">
+        <view class="grid col-4 grid-square">
+          <view class="bg-img" wx:for="{{img_arr}}">
+            <image src='{{item}}'></image>
+          </view>
+        </view>
+      </view>
+      <!-- 按钮 -->
+      <button class="cu-btn block line-orange lg" bindtap="upload" type="default">
+        <text class="cuIcon-upload"></text>上传图片</button>
+    </view>
+
+    <!-- 提交按钮 -->
     <view class="padding flex flex-direction">
       <button class="cu-btn bg-red margin-tb-sm lg" form-type="submit">提交</button>
     </view>
 
     <!-- 加载中 -->
-    <view class='cu-load load-modal' wx:if="{{loadModal}}">
+    <view class='cu-load bg-orange' wx:if="{{loadModal}}">
       <image src='/images/logo.png' class='png' mode='aspectFit'></image>
       <view class='gray-text'>加载中...</view>
     </view>
-
-    <!-- 表单验证 -->
 
   </form>
 </view>
