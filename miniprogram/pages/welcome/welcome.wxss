@@ -23,16 +23,18 @@
 }
 .title {
   margin-top: -340rpx;
-  font-size: 80rpx;
+  font-size: 110rpx;
   color:pink;
   text-shadow: 2px 2px 1px pink;
 }
 .subtitle {
   margin-top: -240rpx;
-  font-size: 40rpx;
+  font-size: 38rpx;
   font-family: 'Times New Roman', Times, serif;
   text-shadow: 2px 2px 1px pink;
+  letter-spacing: 16rpx;
 }
+
 .desc {
   margin-top: 180rpx;
   font-size: 35rpx;
@@ -44,11 +46,18 @@
   font-size: 35rpx;
   text-shadow: 2px 2px 1px pink;
 }
+.subdesc2 {
+  font-size: 35rpx;
+  text-shadow: 2px 2px 1px pink;
+  position: fixed;
+  bottom: 20rpx;
+  left: 50%;
+}
 
 /* Animation */
 .animate2 {
   margin-top: -340rpx;
-  font-size: 80rpx;
+  font-size: 110rpx;
   color: white;
 }
 .animate2 text {

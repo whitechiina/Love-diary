@@ -5,6 +5,7 @@ cloud.init()
 
 const db = cloud.database()
 const productsCollection = db.collection('white')
+const rabot = db.collection('rabot')
 
 // 云函数入口函数
 exports.main = async (event, context) => {
@@ -18,6 +19,15 @@ exports.main = async (event, context) => {
       text: "文本",
       color: "颜色",
       view: "访问记录"
+    }
+  })
+}
+
+// 机器人信息采集
+exports.main = async (event, context) => {
+  return await rabot.add({
+    data: {
+      message: "发送的对话信息",
     }
   })
 }

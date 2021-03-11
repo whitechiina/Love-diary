@@ -1,3 +1,16 @@
 .cu-form-group textarea {
   height: 400rpx;
 }
+
+.shutitle {
+  color: red;
+  writing-mode: horizontal-tb;
+  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
+  font-size: 34rpx;
+  letter-spacing: 20rpx;
+  font-family: SimHei;
+  border: 1rpx solid red;
+  border-radius: 10rpx;
+  padding: 20rpx 4rpx 0rpx 0rpx;
+}

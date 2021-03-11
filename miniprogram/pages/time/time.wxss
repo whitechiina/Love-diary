@@ -11,7 +11,6 @@
   border: 10rpx solid #fff;
 }
 
-
 .middle {
   text-align: center;
   width: 100%;
@@ -29,6 +28,19 @@
   align-items: center;
 }
 
-.middle .content .time{
+.middle .content .time {
   padding: 70rpx;
+}
+
+.middle .content .time text {
+  font-size: 50rpx;
+  letter-spacing: 4rpx;
+  font-weight: 900;
+  font-style: oblique;
+  background-color: transparent;
+  background-image: linear-gradient(#ffe21d, #ffe21d);
+  background-position: 0 85%;
+  background-size: 100% 20%;
+  background-repeat: no-repeat;
+  text-shadow: white 0 0 10rpx;
 }

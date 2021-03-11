@@ -11,3 +11,7 @@
 .cu-timeline>.cu-item>.content {
   border: 8rpx solid #fff;
 }
+
+.cu-timeline .main .shade {
+  z-index: 1000;
+}

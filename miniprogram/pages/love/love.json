@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "智能机器人"
 }

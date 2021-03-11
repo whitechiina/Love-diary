@@ -1,4 +1,6 @@
 <view class="cu-timeline main">
+  <view class="ns">时忆往昔</view>
+  <view style="margin-top: 135rpx"></view>
   <view class="cu-item text-red" wx:for="{{list}}" wx:key="index">
     <view class="{{item.ind}} bg-gradual-red content shadow">
       <view class="text-df padding-bottom-xs">{{item.title}}</view>

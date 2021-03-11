@@ -18,8 +18,8 @@ Page({
       duration: 400
     })
     setTimeout(() => {
-      wx.navigateTo({
-        url: '/pages/index/index',
+      wx.switchTab({
+        url: '/pages/time/time',
       })
     }, 6000)
   },

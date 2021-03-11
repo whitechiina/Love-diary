@@ -48,10 +48,13 @@ Page({
           e.index = "兴趣"
         }
         if (e.index == 2) {
-          e.index = "美食"
+          e.index = "新鲜事"
         }
         if (e.index == 3) {
           e.index = "吐槽"
+        }
+        if (e.index == 4) {
+          e.index = "Miss"
         }
         if (e.ind == 0) {
           e.ind = 'bg-gradual-red'
@@ -67,6 +70,9 @@ Page({
         }
         if (e.ind == 4) {
           e.ind = "bg-gradual-pink"
+        } 
+        if (e.ind == 5) {
+          e.ind = "bg-gradual-orange"
         }
       })
       this.setData({
@@ -86,10 +92,13 @@ Page({
           e.index = "兴趣"
         }
         if (e.index == 2) {
-          e.index = "美食"
+          e.index = "新鲜事"
         }
         if (e.index == 3) {
           e.index = "吐槽"
+        }
+        if (e.index == 4) {
+          e.index = "Miss"
         }
         if (e.ind == 0) {
           e.ind = 'bg-gradual-red'
@@ -106,11 +115,18 @@ Page({
         if (e.ind == 4) {
           e.ind = "bg-gradual-pink"
         }
+        if (e.ind == 5) {
+          e.ind = "bg-gradual-orange"
+        }
       })
       this.setData({
         list: res.data.reverse()
       }, res => {
-        console.log('数据下拉完成')
+        wx.showToast({
+          title: '数据下拉刷新完成',
+          icon: 'success',
+          duration: 2000
+        })
         // 关闭下拉动画
         wx.stopPullDownRefresh()
       })
@@ -121,13 +137,65 @@ Page({
   onReachBottom() {
     let page = this.data.page + 20;
     productsCollection.skip(page).get().then(res => {
+      res.data.forEach(e => {
+        if (e.index == 0) {
+          e.index = '日常'
+        }
+        if (e.index == 1) {
+          e.index = "兴趣"
+        }
+        if (e.index == 2) {
+          e.index = "新鲜事"
+        }
+        if (e.index == 3) {
+          e.index = "吐槽"
+        }
+        if (e.index == 4) {
+          e.index = "Miss"
+        }
+        if (e.ind == 0) {
+          e.ind = 'bg-gradual-red'
+        }
+        if (e.ind == 1) {
+          e.ind = "bg-gradual-green"
+        }
+        if (e.ind == 2) {
+          e.ind = "bg-gradual-blue"
+        }
+        if (e.ind == 3) {
+          e.ind = "bg-gradual-purple"
+        }
+        if (e.ind == 4) {
+          e.ind = "bg-gradual-pink"
+        }
+        if (e.ind == 5) {
+          e.ind = "bg-gradual-orange"
+        }
+      })
       let newdata = res.data;
       let olddata = this.data.list;
       this.setData({
         list: olddata.concat(newdata),
         page: page
       }, res => {
+        wx.showToast({
+          title: '数据触底加载完成',
+          icon: 'success',
+          duration: 2000
+        })
       })
     })
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    return {
+      title: '我还是很喜欢你，像云漂泊九万里，不曾歇息。',
+      success: function (shareTickets) {
+        console.info(shareTickets + '成功');
+      }
+    }
   }
 })

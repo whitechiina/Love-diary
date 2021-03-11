@@ -3,5 +3,6 @@
     "shade": "/pages/shade/shade"
   },
   "enablePullDownRefresh": true,
-  "onReachBottomDistance": 100
+  "onReachBottomDistance": 100,
+  "navigationBarTitleText": "记事本"
 }

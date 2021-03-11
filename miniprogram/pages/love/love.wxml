@@ -1,2 +1,44 @@
-<!--pages/love/love.wxml-->
-<text>pages/love/love.wxml</text>
+<view class="ns">智能YY</view>
+<view style="margin-top: 135rpx"></view>
+<view class="cu-chat">
+  <scroll-view class="history" scroll-y="true" scroll-with-animation scroll-top="{{scrollTop}}">
+    <view wx:for="{{centendata}}" wx:key='index'>
+      <block wx:if="{{item.is_show_right == 1}}">
+        <view class="cu-item self">
+          <view class="main">
+            <view class="content bg-green shadow">
+              <text>{{item.text}}</text>
+            </view>
+          </view>
+          <view class="cu-avatar radius" style="background-image:url(https://cdn.nlark.com/yuque/0/2021/png/428808/1615383359891-3bfed767-451e-466d-8bf1-cc6831911da9.png);"></view>
+        </view>
+      </block>
+
+      <block wx:if="{{item.is_show_right == 2}}">
+        <view class="cu-item">
+          <view class="cu-avatar radius" style="background-image:url(https://cdn.nlark.com/yuque/0/2021/png/428808/1615383358604-1ae08704-1f22-4573-9c64-b70fb92fb342.png);"></view>
+          <view class="main">
+            <view class="content shadow">
+              <text>{{item.text}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+
+
+<view class='hei' id="hei"></view>
+
+<!-- 按钮 -->
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey"></text>
+  </view>
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" value="{{my}}"></input>
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <button class="cu-btn bg-green shadow" style="width: 160rpx" bindtap="send">发送</button>
+</view>
