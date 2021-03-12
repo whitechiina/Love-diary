@@ -18,7 +18,6 @@ Page({
   // 向buyerBasics添加数据
   addBuyerBasics: function(res) {
     let that = this;
-    console.log(that)
     // 条件筛选
     let flag = res.detail.value
     if (flag.title == '') {
@@ -67,6 +66,7 @@ Page({
         img_arr: that.data.img_arr
       }
     }).then(res => {
+      console.log(res)
       this.setData({
         loadModal: false,
         title: '',
@@ -87,9 +87,9 @@ Page({
     wx.chooseImage({ //选择图片
       count: 1, //规定选择图片的数量，默认9
       sizeType: ['original'], //规定图片的尺寸， 原图/压缩图
-      sourceType: ['album'], //从哪里选择图片， 相册/相机
+      sourceType: ['album','camera'], //从哪里选择图片， 相册/相机
       success: (chooseres) => { //接口调用成功的时候执行的函数
-        //选择图片后可以在这里上传
+        console.log(chooseres)
         wx.cloud.uploadFile({
           cloudPath: new Date().getTime() + "-" + Math.floor(Math.random() * 1000),//云储存的路径及文件名
           filePath: chooseres.tempFilePaths[0], //要上传的图片/文件路径 这里使用的是选择图片返回的临时地址
@@ -118,11 +118,19 @@ Page({
     })
   },
   
+  // 删除图片
+  delect:function (e) {
+    this.setData({
+      img_arr: []
+    })
+  },
+
   TimeChange(e) {
     this.setData({
       time: e.detail.value
     })
   },
+
   DateChange(e) {
     this.setData({
       date: e.detail.value

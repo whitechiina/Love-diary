@@ -52,14 +52,16 @@
     <view>
       <view class="padding">
         <view class="grid col-4 grid-square">
-          <view class="bg-img" wx:for="{{img_arr}}">
+          <view class="bg-img" wx:for="{{img_arr}}" wx:key="item">
             <image src='{{item}}'></image>
+            <text class="cuIcon-close lg text-gray" style="width:50rpx; height:50rpx" bindtap="delect" data-url="{{index}}"></text>
           </view>
         </view>
       </view>
       <!-- 按钮 -->
       <button class="cu-btn block line-orange lg" bindtap="upload" type="default">
-        <text class="cuIcon-upload"></text>上传图片</button>
+        <text class="cuIcon-upload">上传图片</text>
+      </button>
     </view>
 
     <!-- 提交按钮 -->

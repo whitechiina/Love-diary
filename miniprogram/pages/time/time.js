@@ -113,6 +113,13 @@ Page({
     })
   },
 
+  /**
+  * 监听 TabBar 切换点击
+  */
+  onTabItemTap: function (item) {
+    this.onLoad()
+  },
+
   secondToDate(second) {
     if (!second) {
       return 0;

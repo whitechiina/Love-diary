@@ -143,7 +143,6 @@ Page({
     })
   },
   
-
   // 触底刷新
   onReachBottom() {
     let page = this.data.page + 20;
