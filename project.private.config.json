@@ -1,0 +1,29 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/impower/impower",
+          "pathName": "pages/impower/impower",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/time/time",
+          "pathName": "pages/time/time",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

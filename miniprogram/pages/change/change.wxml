@@ -1,0 +1,31 @@
+<view class="main">
+  <view>
+    <view class="flex justify-between align-center ns" style="padding: 0rpx 20rpx">
+      <view bindtap="back">返回</view>
+      <view>更换头像&背景</view>
+      <view style="opacity: 0">测试</view>
+    </view>
+  </view>
+
+  <view class="replace" bindtap="bgreplace" style="z-index: 99">
+    <image src="../../images/图片替换.png"></image>
+  </view>
+
+  <view style="position: relative; overflow: hidden">
+    <image style="width: 100%; height: 100vh" src="{{bg}}"></image>
+  </view>
+  <view style="position: fixed; top: 16%; left: 25%">
+    <view class="content margin-top">
+      <view bindtap="xy" style="position: relative;">
+        <image class="cu-avatar bg round" src="{{xy}}"></image>
+        <text style="font-size: 200rpx; color: gray; position:absolute; left: 35%; top:17%">+</text>
+      </view>
+      <view bindtap="yy" class="margin-top: 100rpx" style="position: relative;">
+        <image class="cu-avatar bg round" src="{{yy}}"></image>
+        <text style="font-size: 200rpx; color: gray; position:absolute; left: 35%; top:17%">+</text>
+      </view>
+
+      <button class="cu-btn bg-red margin-tb-sm lg" style="margin-top: 90rpx" bindtap="sure">确定</button>
+    </view>
+  </view>
+</view>

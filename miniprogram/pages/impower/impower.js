@@ -2,7 +2,8 @@ Page({
   data: {
     //判断小程序的API，回调，参数，组件等是否在当前版本可用。
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    isHide: false
+    isHide: false,
+    userInfo: {}
   },
   onLoad: function () {
     var that = this;
@@ -49,11 +50,10 @@ Page({
       //用户按了允许授权按钮
       var that = this;
       // 获取到用户的信息了，打印到控制台上看下
-      console.log("用户的信息如下：");
-      console.log(e.detail.userInfo);
       //授权成功后,通过改变 isHide 的值，让实现页面显示出来，把授权页面隐藏起来
       that.setData({
-        isHide: false
+        isHide: false,
+        userInfo: e.detail.userInfo
       });
     } else {
       //用户按了拒绝按钮

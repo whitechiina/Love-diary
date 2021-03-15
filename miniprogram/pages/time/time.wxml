@@ -1,13 +1,14 @@
-<view class="middle" style="background-image:url({{bg}}); background; background-size:cover; background-repeat:no-repeat;">
+<view class="main">
+  <view style="position: relative">
+  <image style="width: 100%; height: 100vh" src="{{bg}}"></image>
+</view>
+<view class="middle" style="position: fixed; top: 0; left: 0">
   <view class="content margin-top">
-    <view class="cu-avatar bg round margin-left" style="background-image:url(https://cdn.nlark.com/yuque/0/2021/png/428808/1615383358604-1ae08704-1f22-4573-9c64-b70fb92fb342.png);">
-    </view>
-
+    <image class="cu-avatar bg round margin-left" src="{{xy}}"></image>
     <view class="time">
       <text style="color: {{color}}" class="text-center text-shadow text-blue">{{nowDate}}</text>
     </view>
-
-    <view class="cu-avatar bg round margin-left" style="background-image:url(https://cdn.nlark.com/yuque/0/2021/png/428808/1615383359891-3bfed767-451e-466d-8bf1-cc6831911da9.png);">
-    </view>
+    <image class="cu-avatar bg round margin-left" src="{{yy}}"></image>
   </view>
+</view>
 </view>

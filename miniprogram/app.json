@@ -7,18 +7,18 @@
     "pages/love/love",
     "pages/setting/setting",
     "pages/shade/shade",
-    "pages/impower/impower"
+    "pages/impower/impower",
+    "pages/change/change"
   ],
   "window": {
     "navigationStyle": "custom",
     "enablePullDownRefresh": true,
-
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff"
   },
   "usingComponents": {
-    "cu-custom": "/colorui/components/cu-custom"
+    "setting": "/pages/setting/setting"
   },
   "tabBar": {
     "selectedColor": "#e03997",

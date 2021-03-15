@@ -6,6 +6,7 @@ cloud.init()
 const db = cloud.database()
 const productsCollection = db.collection('white')
 const rabot = db.collection('rabot')
+const image = db.collection('image')
 
 // 云函数入口函数
 exports.main = async (event, context) => {
@@ -28,6 +29,15 @@ exports.main = async (event, context) => {
   return await rabot.add({
     data: {
       message: "发送的对话信息",
+    }
+  })
+}
+
+// 获取头像
+exports.main = async (event, context) => {
+  return await image.add({
+    data: {
+      image: "",
     }
   })
 }

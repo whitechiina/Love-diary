@@ -1,10 +1,14 @@
-// pages/time/time.js
-Page({
+// 头像和背景图
+const db = wx.cloud.database()
+const productsCollection = db.collection('image')
+const _ = db.command
 
-  /**
-   * 页面的初始数据
-   */
+
+Page({
   data: {
+    xy: '',
+    yy: '',
+    bg: '',
     nowDate: "00年00天00时00分00秒", // 当前日期
     timer: '',
     color: {},
@@ -96,8 +100,7 @@ Page({
       {
         img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386501924-28ac2b33-a693-4d4f-912a-3aea432cfa58.jpeg'
       }
-    ],
-    bg: ''
+    ]
   },
 
   /**
@@ -106,18 +109,21 @@ Page({
   onLoad: function (options) {
     this.timer = setInterval(this.setTime, 1000);
     let index = this.data.list[Math.floor((Math.random() * this.data.list.length))];
-    let bg = this.data.bgimages[Math.floor((Math.random() * this.data.bgimages.length))];
     this.setData({
       color: index.color,
-      bg: bg.img
-    })
-  },
+    }),
 
-  /**
-  * 监听 TabBar 切换点击
-  */
-  onTabItemTap: function (item) {
-    this.onLoad()
+    // 查询头像
+    productsCollection.get().then(res => {
+      // 获取默认存储的两张图片
+      let piclist = res.data.reverse()
+      console.log(piclist)
+      this.setData({
+        xy: piclist[0].xy,
+        yy: piclist[0].yy,
+        bg: piclist[0].bg
+      })
+    })
   },
 
   secondToDate(second) {
@@ -159,6 +165,23 @@ Page({
     })
   },
 
+  // 下拉刷新
+  onPullDownRefresh() {
+    // 查询头像
+    productsCollection.get().then(res => {
+      // 获取默认存储的两张图片
+      let piclist = res.data.reverse()
+      console.log(piclist)
+      this.setData({
+        xy: piclist[0].xy,
+        yy: piclist[0].yy,
+        bg: piclist[0].bg
+      })
+    })
+    // 关闭下拉动画
+    wx.stopPullDownRefresh()
+  },
+  
   /**
    * 用户点击右上角分享
    */
