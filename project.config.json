@@ -2,7 +2,7 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
@@ -54,8 +54,9 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/add/add",
-					"pathName": "pages/add/add",
+					"name": "pages/impower/impower",
+					"pathName": "pages/impower/impower",
+					"query": "",
 					"scene": null
 				}
 			]

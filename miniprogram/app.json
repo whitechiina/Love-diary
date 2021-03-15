@@ -3,12 +3,11 @@
     "pages/welcome/welcome",
     "pages/time/time",
     "pages/notes/notes",
-    "pages/index/index",
-    "pages/messagee/messagee",
-    "pages/love/love",
-    
     "pages/add/add",
-    "pages/shade/shade"
+    "pages/love/love",
+    "pages/setting/setting",
+    "pages/shade/shade",
+    "pages/impower/impower"
   ],
   "window": {
     "navigationStyle": "custom",
@@ -48,6 +47,12 @@
         "selectedIconPath": "images/机器人.png",
         "iconPath": "images/机器人.png",
         "text": "智能YY"
+      },
+      {
+        "pagePath": "pages/impower/impower",
+        "selectedIconPath": "images/设置.png",
+        "iconPath": "images/设置.png",
+        "text": "设置"
       }
     ]
   },
