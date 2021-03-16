@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  },
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": 100
+}

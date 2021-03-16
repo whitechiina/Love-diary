@@ -88,17 +88,16 @@ Page({
     })
   },
 
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function (res) {
     return {
-      title: '我还是很喜欢你，像日光洒满天地，温柔惬意。',
+      title: '你想问我什么？',
       success: function (shareTickets) {
         console.info(shareTickets + '成功');
       }
     }
   },
+
+  // 页面不下拉
   onPageScroll: function (e) {
     if (e.scrollTop < 0) {
       wx.pageScrollTo({

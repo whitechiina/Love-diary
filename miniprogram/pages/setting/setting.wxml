@@ -13,7 +13,7 @@
     <view class="margin-top-sm">
       <text>By: jinyaowei.xyz</text>
     </view>
-    <image src="../../images/bg.gif" mode="scaleToFill"
+    <image src="https://cdn.nlark.com/yuque/0/2021/gif/428808/1615900277974-542929f2-4cf9-4574-8408-7eec42b7db53.gif" mode="scaleToFill"
       class="gif-wave"></image>
   </view>
   <view class="padding flex text-center text-grey bg-white shadow-warp">
@@ -42,10 +42,16 @@
       </view>
     </view>
     <view class="cu-item arrow">
-      <view class="content" bindtap="day">
-        <text class="cuIcon-weunblock text-red"></text>
-        <text class="text-grey">纪念日</text>
+      <view class="content" bindtap="date">
+        <text class="cuIcon-location text-grey"></text>
+        <text class="text-grey">中国地图</text>
       </view>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/about" hover-class="none">
+        <text class="cuIcon-info text-grey"></text>
+        <text class="text-grey">关于</text>
+      </navigator>
     </view>
   </view>
   <view class="cu-tabbar-height"></view>

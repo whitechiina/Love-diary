@@ -13,8 +13,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/setting/setting",
-          "pathName": "pages/setting/setting",
+          "name": "pages/date/date",
+          "pathName": "pages/date/date",
           "query": "",
           "scene": null
         }

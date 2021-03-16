@@ -126,6 +126,9 @@ Page({
     })
   },
 
+  onUnload() {
+    clearInterval(this.timer)
+  },
   secondToDate(second) {
     if (!second) {
       return 0;

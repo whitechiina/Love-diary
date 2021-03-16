@@ -1,0 +1,13 @@
+<view>
+  <!-- 顶部 -->
+  <view class="flex justify-between align-center ns" style="padding: 0rpx 20rpx">
+    <view bindtap="back">返回</view>
+    <view>Chine Map</view>
+    <view style="opacity: 0">测试</view>
+  </view>
+
+  <!-- 图表 -->
+  <view class="container">
+    <ec-canvas id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ecMap }}"></ec-canvas>
+  </view>
+</view>

@@ -13,7 +13,7 @@
       </view>
 
       <!-- 图片展示 -->
-      <view class="flex" wx:for="{{item.img_arr}}" style="width: 30%; display:inline-block;margin-right: 10rpx">
+      <view class="flex" wx:for="{{item.img_arr}}" style="width: 30%; display:inline-block; margin-right: 10rpx">
         <image class="flex-sub radius" src="{{item}}" style="height: 140rpx" data-url="{{item}}"></image>
       </view>
 

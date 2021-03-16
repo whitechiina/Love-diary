@@ -1,0 +1,24 @@
+<!-- 顶部 -->
+<view class="flex justify-between align-center ns" style="padding: 0rpx 20rpx">
+  <view bindtap="back">返回</view>
+  <view>关于</view>
+  <view style="opacity: 0">测试</view>
+</view>
+<view style="position: fixed; top: 120rpx">
+  <view class='margin-xl bg-white padding-xl radius shadow-lg'>
+    <view class='text-center margin-bottom text-lg  text-red'>关于这个小程序</view>
+    <view class='text-content'>
+      <view>Hi！</view>
+      <view class='margin-top-sm'>
+        这个项目是我从认识瑶瑶开始之后一直在维护的项目，刚好想要学习一下小程序，就利用了小程序云开发技术搞了一个出来，也希望它能一直伴随我们两个人从相遇到相知……
+      </view>
+      <view class='margin-top-sm'>
+        觉得我们都属于同类人，含蓄且又不失热烈，不知道对你的认知是否如此，我认为最好的爱情，不是因为我们彼此需要在一起，而是因为我们彼此想要在一起，认识你之后我突然觉得异地恋、网恋可能没有不靠谱，所以我会等，就如果遇见了喜欢，可能也不会对合适的心动了……
+      </view>
+      <view class='margin-top-sm'>
+        代码最后一次更新是在3月16日，瑶瑶我最近有点忙（出差），时间可能会有点紧，所以，有些难搞、复杂的需求可能就先暂时搁置了，有时间再搞吧~</view>
+      <view class='margin-top-sm'>但是可千万别因为这个不给我发信息呀，哈哈٩(๑❛ᴗ❛๑)</view>
+      <view class='margin-top-sm'>更多功能呢，敬请期待啦！</view>
+    </view>
+  </view>
+</view>
