@@ -8,7 +8,8 @@
     "pages/setting/setting",
     "pages/shade/shade",
     "pages/impower/impower",
-    "pages/change/change"
+    "pages/change/change",
+    "pages/photo/photo"
   ],
   "window": {
     "navigationStyle": "custom",

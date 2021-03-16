@@ -31,6 +31,11 @@ Component({
       wx.navigateTo({
         url: '../change/change',
       })
+    },
+    photo: function() {
+      wx.navigateTo({
+        url: '../photo/photo',
+      })
     }
   }
 })

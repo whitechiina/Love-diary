@@ -30,15 +30,21 @@
   </view>
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="changeimage" data-link="https://github.com/whitechiina">
-        <text class="cuIcon-github text-grey"></text>
-        <text class="text-grey">更换头像</text>
+      <view class="content" bindtap="changeimage">
+        <text class="cuIcon-friend text-grey"></text>
+        <text class="text-grey">自定义头像&背景</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="photo">
+        <text class="cuIcon-picfill text-grey"></text>
+        <text class="text-grey">照片墙</text>
       </view>
     </view>
     <view class="cu-item arrow">
       <view class="content" bindtap="day">
-        <text class="cuIcon-appreciatefill text-red"></text>
-        <text class="text-grey">day</text>
+        <text class="cuIcon-weunblock text-red"></text>
+        <text class="text-grey">纪念日</text>
       </view>
     </view>
   </view>

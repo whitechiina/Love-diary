@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -12,15 +13,9 @@
     "miniprogram": {
       "list": [
         {
-          "id": -1,
-          "name": "pages/impower/impower",
-          "pathName": "pages/impower/impower",
+          "name": "pages/setting/setting",
+          "pathName": "pages/setting/setting",
           "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/time/time",
-          "pathName": "pages/time/time",
           "scene": null
         }
       ]

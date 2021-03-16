@@ -1,0 +1,35 @@
+<view>
+  <view>
+    <view class="flex justify-between align-center ns" style="padding: 0rpx 20rpx">
+      <view bindtap="back">返回</view>
+      <view>照片墙</view>
+      <view style="opacity: 0">测试</view>
+    </view>
+  </view>
+
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true"
+      autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3"
+      indicator-active-color="#0081ff">
+      <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+        <view class="swiper-item">
+          <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+          <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"
+            wx:if="{{item.type=='video'}}"></video>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 照片列表 -->
+  <view class="pic">
+    <view class="grid col-2">
+      <view class="bg-img padding" wx:for="{{swiperList}}" wx:key="{{index}}" bindtap="previewImage"
+        data-url="{{imgList.url}}">
+        <image src='{{item.url}}' mode='widthFix' bindtap='previewImage' data-src='{{item.url}}'>
+        </image>
+      </view>
+    </view>
+  </view>
+</view>
