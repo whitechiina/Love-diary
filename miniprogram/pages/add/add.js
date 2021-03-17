@@ -91,7 +91,7 @@ Page({
       success: (chooseres) => { //接口调用成功的时候执行的函数
         console.log(chooseres)
         wx.cloud.uploadFile({
-          cloudPath: new Date().getTime() + "-" + Math.floor(Math.random() * 1000),//云储存的路径及文件名
+          cloudPath: new Date().getTime() + "-" + Math.floor(Math.random() * 1000)+ '.png',//云储存的路径及文件名
           filePath: chooseres.tempFilePaths[0], //要上传的图片/文件路径 这里使用的是选择图片返回的临时地址
           success: (uploadres) => { //上传图片到云储存成功
             // 图片获取赋值

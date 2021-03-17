@@ -13,92 +13,69 @@ Page({
     timer: '',
     color: {},
     list: [{
-      title: '嫣红',
-      name: 'red',
-      color: '#e54d42'
-    },
-    {
-      title: '桔橙',
-      name: 'orange',
-      color: '#f37b1d'
-    },
-    {
-      title: '明黄',
-      name: 'yellow',
-      color: '#fbbd08'
-    },
-    {
-      title: '橄榄',
-      name: 'olive',
-      color: '#8dc63f'
-    },
-    {
-      title: '森绿',
-      name: 'green',
-      color: '#39b54a'
-    },
-    {
-      title: '天青',
-      name: 'cyan',
-      color: '#1cbbb4'
-    },
-    {
-      title: '海蓝',
-      name: 'blue',
-      color: '#0081ff'
-    },
-    {
-      title: '姹紫',
-      name: 'purple',
-      color: '#6739b6'
-    },
-    {
-      title: '木槿',
-      name: 'mauve',
-      color: '#9c26b0'
-    },
-    {
-      title: '桃粉',
-      name: 'pink',
-      color: '#e03997'
-    },
-    {
-      title: '棕褐',
-      name: 'brown',
-      color: '#a5673f'
-    },
-    {
-      title: '墨黑',
-      name: 'black',
-      color: '#333333'
-    },
-    {
-      title: '雅白',
-      name: 'white',
-      color: '#ffffff'
-    }
-    ],
-    bgimages: [
-      {
-        img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386507499-8ab26615-fd88-46df-84a3-f985eb636b6b.jpeg'
+        title: '嫣红',
+        name: 'red',
+        color: '#e54d42'
       },
       {
-        img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386506874-7f44cc2a-a78c-4807-bdbf-0cf025120461.jpeg'
+        title: '桔橙',
+        name: 'orange',
+        color: '#f37b1d'
       },
       {
-        img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386506093-55b74082-cc86-468b-9cc6-946dde9f0fc3.jpeg'
+        title: '明黄',
+        name: 'yellow',
+        color: '#fbbd08'
       },
       {
-        img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386505106-129dbfba-2865-494a-95df-545137da02d8.jpeg'
+        title: '橄榄',
+        name: 'olive',
+        color: '#8dc63f'
       },
       {
-        img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386504128-5d9023eb-b6ed-47d3-b113-e786bf2759b0.jpeg'
+        title: '森绿',
+        name: 'green',
+        color: '#39b54a'
       },
       {
-        img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386502899-a74096af-990f-4ba5-a745-010b7cb57cd7.jpeg'
+        title: '天青',
+        name: 'cyan',
+        color: '#1cbbb4'
       },
       {
-        img: 'https://cdn.nlark.com/yuque/0/2021/jpeg/428808/1615386501924-28ac2b33-a693-4d4f-912a-3aea432cfa58.jpeg'
+        title: '海蓝',
+        name: 'blue',
+        color: '#0081ff'
+      },
+      {
+        title: '姹紫',
+        name: 'purple',
+        color: '#6739b6'
+      },
+      {
+        title: '木槿',
+        name: 'mauve',
+        color: '#9c26b0'
+      },
+      {
+        title: '桃粉',
+        name: 'pink',
+        color: '#e03997'
+      },
+      {
+        title: '棕褐',
+        name: 'brown',
+        color: '#a5673f'
+      },
+      {
+        title: '墨黑',
+        name: 'black',
+        color: '#333333'
+      },
+      {
+        title: '雅白',
+        name: 'white',
+        color: '#ffffff'
       }
     ]
   },
@@ -110,25 +87,33 @@ Page({
     this.timer = setInterval(this.setTime, 1000);
     let index = this.data.list[Math.floor((Math.random() * this.data.list.length))];
     this.setData({
-      color: index.color,
-    }),
+        color: index.color,
+      }),
 
-    // 查询头像
-    productsCollection.get().then(res => {
-      // 获取默认存储的两张图片
-      let piclist = res.data.reverse()
-      console.log(piclist)
-      this.setData({
-        xy: piclist[0].xy,
-        yy: piclist[0].yy,
-        bg: piclist[0].bg
+      // 查询头像
+      productsCollection.get().then(res => {
+        // 获取默认存储的两张图片
+        let piclist = res.data.reverse()
+        console.log(piclist)
+        this.setData({
+          xy: piclist[0].xy,
+          yy: piclist[0].yy,
+          bg: piclist[0].bg
+        })
       })
-    })
   },
 
   onUnload() {
     clearInterval(this.timer)
   },
+  
+  /**
+   * 监听 TabBar 切换点击
+   */
+  onTabItemTap: function (item) {
+    this.onLoad()
+  },
+
   secondToDate(second) {
     if (!second) {
       return 0;
@@ -184,7 +169,7 @@ Page({
     // 关闭下拉动画
     wx.stopPullDownRefresh()
   },
-  
+
   /**
    * 用户点击右上角分享
    */

@@ -59,7 +59,7 @@
         </view>
       </view>
       <!-- 按钮 -->
-      <button class="cu-btn block line-orange lg" bindtap="upload" type="default">
+      <button class="cu-btn block bg-mauve lg" bindtap="upload">
         <text class="cuIcon-upload">上传图片</text>
       </button>
     </view>

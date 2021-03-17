@@ -13,9 +13,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/date/date",
-          "pathName": "pages/date/date",
+          "name": "pages/notes/notes",
+          "pathName": "pages/notes/notes",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
           "scene": null
         }
       ]

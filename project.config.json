@@ -10,9 +10,10 @@
     "newFeature": true,
     "coverView": true,
     "nodeModules": true,
-    "autoAudits": true,
+    "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
+    "uglifyFileName": true,
     "checkInvalidKey": true,
     "checkSiteMap": false,
     "uploadWithSourceMap": true,
@@ -31,8 +32,7 @@
     "userConfirmedBundleSwitch": true,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "uglifyFileName": true
+    "minifyWXSS": true
   },
   "appid": "wx117c2461eeab6d08",
   "projectname": "%E4%BA%91%E5%BC%80%E5%8F%91",

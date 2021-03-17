@@ -44,7 +44,7 @@
     <view class="cu-item arrow">
       <view class="content" bindtap="date">
         <text class="cuIcon-location text-grey"></text>
-        <text class="text-grey">中国地图</text>
+        <text class="text-grey">地图</text>
       </view>
     </view>
     <view class="cu-item arrow">

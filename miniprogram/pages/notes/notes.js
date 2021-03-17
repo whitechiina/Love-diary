@@ -5,18 +5,19 @@ const _ = db.command
 Page({
   data: {
     list: [],
-    page: 0
+    page: 0,
+    array: 0
   },
 
   // 点赞
-  click: function(e) {
+  click: function (e) {
     let id = e.currentTarget.dataset.id;
     //向云函数中传递参数
     productsCollection.doc(e.currentTarget.dataset.id).update({
       data: {
         view: _.inc(1)
       }
-    }).then((res)=> {
+    }).then((res) => {
       //数据库更新成功之后获取结果
       let updated = res.stats.updated;
       if (updated) {
@@ -43,7 +44,7 @@ Page({
       res.data.forEach(e => {
         if (e.index == 0) {
           e.index = '日常'
-        } 
+        }
         if (e.index == 1) {
           e.index = "兴趣"
         }
@@ -70,7 +71,7 @@ Page({
         }
         if (e.ind == 4) {
           e.ind = "bg-gradual-pink"
-        } 
+        }
         if (e.ind == 5) {
           e.ind = "bg-gradual-orange"
         }
@@ -136,13 +137,13 @@ Page({
 
   //预览图片，放大预览
   preview(event) {
-    var src = event.currentTarget.dataset.src;//获取data-src
+    var src = event.currentTarget.dataset.src; //获取data-src
     //图片预览
     wx.previewMedia({
       current: src // 当前显示图片的http链接
     })
   },
-  
+
   // 触底刷新
   onReachBottom() {
     let page = this.data.page + 20;
@@ -194,6 +195,22 @@ Page({
           duration: 2000
         })
       })
+    })
+  },
+
+  //预览图片
+  previewImage(e) {
+    wx.cloud.getTempFileURL({
+      fileList: [e.currentTarget.dataset.src],
+      success(res) {
+        var urls = res.fileList[0].tempFileURL
+        var arr = []
+        arr.push(urls) 
+        wx.previewImage({
+          current: urls,   //当前预览的图片临时地址
+          urls: arr    //当前预览图片的列表集合
+        })
+      }
     })
   },
 
